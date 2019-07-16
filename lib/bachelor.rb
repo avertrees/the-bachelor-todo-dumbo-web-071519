@@ -1,5 +1,6 @@
 def get_first_name_of_season_winner(data, season)
   # code here
+<<<<<<< HEAD
   winner = data[season].select{|contestant| contestant["status"] == "Winner"}
   name = winner[0]["name"].split(' ')
   return name[0]
@@ -14,6 +15,24 @@ def contestants(data)
   end
   puts contestantHash
   return contestantHash
+=======
+  data.each do |season|
+    season.each do |contestant|
+      return contestant["name"]
+      # contestant.each do |hash|
+      #   puts hash
+      #   return contestant["name"]
+      # end
+      # if contestant["name":] == "Ashley Iaconetti"
+      #   puts contestant["name":]
+      # end
+      # if season == "Season 18"
+      #   return "yes"     
+      # end 
+    end
+  end
+  
+>>>>>>> b1999de8dbc4de2daf35d49a3ceeb85b93d1b988
 end
 
 def get_contestant_name(data, occupation)
